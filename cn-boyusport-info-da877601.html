@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博鱼体育 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f4f6;
+            color: #2c2f33;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 开场 Hero 区域 —— 短促有力 */
+        .hero {
+            background: #fafbfc;
+            border: 1px solid #e2e5ea;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.04);
+            padding: 2.8rem 2rem 2.5rem;
+            margin-bottom: 2.2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e2125;
+            margin-bottom: 0.65rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: #5b5f66;
+            max-width: 580px;
+            margin: 0 auto 0.6rem;
+            font-weight: 380;
+        }
+
+        .hero .sub {
+            font-size: 0.95rem;
+            color: #7f858e;
+            border-top: 1px solid #eaecef;
+            display: inline-block;
+            padding-top: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e8ed;
+            border-radius: 18px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 4px 12px rgba(0, 0, 0, 0.02);
+            padding: 2rem 2rem 1.8rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            font-weight: 480;
+            color: #1e2125;
+            margin-bottom: 0.9rem;
+            border-left: 4px solid #aab0b9;
+            padding-left: 0.9rem;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+            color: #3b3f46;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 - 轻量网格 */
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.4rem;
+            margin: 1.2rem 0 0.2rem;
+        }
+
+        .feature-item {
+            background: #f9fafb;
+            padding: 0.9rem 1rem;
+            border-radius: 14px;
+            border: 1px solid #edf0f4;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.01);
+            font-size: 0.98rem;
+            color: #2d3138;
+        }
+
+        .feature-item strong {
+            font-weight: 520;
+            color: #121416;
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #5d626b;
+        }
+
+        /* 提示卡 / 引用块 */
+        .insight-box {
+            background: #f7f8fa;
+            border-left: 4px solid #b6bcc6;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0 1rem;
+            color: #363a41;
+            font-size: 0.96rem;
+        }
+
+        .insight-box strong {
+            font-weight: 500;
+        }
+
+        /* 内联链接样式 */
+        a {
+            color: #1f3a5e;
+            text-decoration: none;
+            border-bottom: 1px solid #cdd3db;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 420;
+        }
+
+        a:hover {
+            color: #0b1f36;
+            border-bottom-color: #7f8b9b;
+        }
+
+        /* FAQ 摘要式 */
+        .faq-mini {
+            margin-top: 0.8rem;
+        }
+
+        .faq-mini dt {
+            font-weight: 470;
+            margin: 0.8rem 0 0.2rem;
+            color: #1e2125;
+        }
+
+        .faq-mini dd {
+            margin-left: 0.8rem;
+            color: #4d525b;
+            font-size: 0.96rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px dashed #e4e7ec;
+        }
+
+        .faq-mini dd:last-of-type {
+            border-bottom: none;
+        }
+
+        /* 温和结尾 */
+        .footer-note {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: #f8f9fb;
+            border-radius: 20px;
+            border: 1px solid #e7e9ed;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #565b63;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.01);
+        }
+
+        .footer-note p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 响应式 */
+        @media (max-width: 680px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .hero {
+                padding: 2rem 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .card {
+                padding: 1.6rem 1.2rem;
+            }
+            .feature-list {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            .insight-box {
+                padding: 1rem 1.2rem;
+            }
+            .footer-note {
+                padding: 1.2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero .tagline {
+                font-size: 1rem;
+            }
+            .card h2 {
+                font-size: 1.2rem;
+                padding-left: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="hero">
+        <h1>博鱼体育 · 简明视角</h1>
+        <p class="tagline">一个围绕体育与休闲的线上空间，了解前值得先读的几点。</p>
+        <div class="sub">避免信息过载 · 从基础开始</div>
+    </div>
+
+    <!-- 承接段落：从指南角度出发 -->
+    <div class="card">
+        <h2>先理解再决定</h2>
+        <p>很多人第一次接触到<a href="https://cn-boyusport.com">博鱼体育</a>时，会好奇它究竟提供什么。简单来说，这是一个综合型平台，聚合了体育资讯、赛事动态以及相关互动内容。但和任何线上信息源一样，最好提前了解它的定位和边界，再决定如何使用。</p>
+        <p>下面的几点并不是广告，而是帮你快速建立认知框架——当你访问时就不会因页面布局或功能分类感到困惑。保持理性，从基础层面看待这个站点，会让你体验更顺畅。</p>
+    </div>
+
+    <!-- 特点列表（轻量、信息型） -->
+    <div class="card">
+        <h2>四个可注意的特点</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>内容结构</strong>
+                <span>板块划分较清晰，入口和分类集中在导航区域，适合先浏览再深入。</span>
+            </div>
+            <div class="feature-item">
+                <strong>体育覆盖</strong>
+                <span>涵盖多种常见运动项目，赛事信息更新节奏稳定，可当作参考渠道之一。</span>
+            </div>
+            <div class="feature-item">
+                <strong>界面风格</strong>
+                <span>配色与布局偏向功能化，减少视觉干扰，阅读信息时相对省力。</span>
+            </div>
+            <div class="feature-item">
+                <strong>访问提醒</strong>
+                <span>建议使用主流浏览器，并确保网络稳定；部分页面可能包含外部链接。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 场景与提示 混合段落 -->
+    <div class="card">
+        <h2>适用场景与习惯建议</h2>
+        <p>如果你平时喜欢浏览体育新闻、关注联赛动态，或者想找一个聚合了多种体育话题的地方，<a href="https://cn-boyusport.com">博鱼体育</a>或许能节省一些搜索时间。不过，请把它当作信息来源之一，而不是唯一渠道。交叉验证细节，尤其是赛程和时间，永远是稳妥的做法。</p>
+        <div class="insight-box">
+            <strong>一个小提醒：</strong> 初次访问时，可以先花几分钟了解菜单和分类逻辑。许多用户反馈，熟悉布局后查找内容的速度会明显提升。如果遇到页面加载稍慢的情况，稍等或刷新即可。
+        </div>
+        <p>对于不愿意在太多标签页间切换的人来说，这类集中型平台可以降低注意力分散。但也要注意，任何站点都无法保证百分之百的实时性，所以关键信息最好以官方来源为准。</p>
+    </div>
+
+    <!-- FAQ 摘要（非完整问答，但保留知识型语感） -->
+    <div class="card">
+        <h2>常见疑问摘要</h2>
+        <dl class="faq-mini">
+            <dt>这个站适合新手吗？</dt>
+            <dd>页面引导比较直接，没有复杂注册流程，浏览不需要特殊技能。从首页开始沿着导航走即可。</dd>
+            <dt>是否需要安装额外软件？</dt>
+            <dd>不需要。普通浏览器就能完整访问，也不需要下载任何客户端。保持浏览器更新即可。</dd>
+            <dt>内容是否每天更新？</dt>
+            <dd>目测保持较高的更新频率，但具体节奏可能随赛事季节变化。建议定期查看。</dd>
+        </dl>
+        <p style="margin-top: 1rem;">如果你还有别的疑问，直接进入站点探索往往比道听途说更有效。只要保持平常心，它就是一个普通但有价值的信息页面。</p>
+    </div>
+
+    <!-- 温和结尾 -->
+    <div class="footer-note">
+        <p>上面这些只是帮你建立初步印象。与其猜测，不如亲自看一眼。<br>
+        每个人使用习惯不同，找到自己的节奏最重要。祝顺利。</p>
+    </div>
+
+</div>
+</body>
+</html>
